@@ -9,6 +9,7 @@ class PlayState extends FlxState
 {
 	var hero:Hero;
 	var helloWorld:FlxText;
+	var controllableHero:ControllableHero;
 
 	override public function create()
 	{
@@ -24,6 +25,9 @@ class PlayState extends FlxState
 		{
 			add(new ScreensaverHero(200, 200));
 		}
+
+		controllableHero = new ControllableHero(100, 100);
+		add(controllableHero);
 	}
 
 	override public function update(elapsed:Float)
