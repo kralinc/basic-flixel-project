@@ -19,6 +19,11 @@ class PlayState extends FlxState
 		helloWorld = new FlxText(200, 200, 0, "Hello, World!", 30);
 		helloWorld.setFormat("assets/PermanentMarker-Regular.ttf", 45, 0xffaa55);
 		add(helloWorld);
+
+		for (i in 0...10)
+		{
+			add(new ScreensaverHero(200, 200));
+		}
 	}
 
 	override public function update(elapsed:Float)
